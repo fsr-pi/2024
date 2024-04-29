@@ -3,7 +3,7 @@ using System.Text;
 
 Console.OutputEncoding = Encoding.UTF8;
 
-Course c = new Course("RPPP");
+Course c = new Course("PI");
 c["Pero"] = 2;
 c["Ana"] = 5;
 c["Ivan"] = 5;
