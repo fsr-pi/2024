@@ -2,7 +2,7 @@
 {
   public class Constants
   {
-    public static string Message => "Message";
+    public static string Message => nameof(Message);
 
     public static string ErrorOccurred => "ErrorOccurred";
   }

@@ -2,16 +2,18 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace MVC_EN.Models;
 
 public partial class Country
 {
-    public string CountryCode { get; set; }
+  [DisplayName("Country Code")] public string CountryCode { get; set; }
+  [DisplayName("Country Name")] public string CountryName { get; set; }
+  [DisplayName("ISO3")]
 
-    public string CountryName { get; set; }
-
-    public string CountryIso3 { get; set; }
+  public string CountryIso3 { get; set; }
 
     public virtual ICollection<City> Cities { get; set; } = new List<City>();
 }

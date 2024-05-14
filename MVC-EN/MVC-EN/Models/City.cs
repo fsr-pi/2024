@@ -2,20 +2,17 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MVC_EN.Models;
 
 public partial class City
 {
-    public int CityId { get; set; }
-
-    public string CountryCode { get; set; }
-
-    public string CityName { get; set; }
-
-    public int PostalCode { get; set; }
-
-    public string PostalName { get; set; }
+  public int CityId { get; set; }
+  [Display(Name = "Country")] public string CountryCode { get; set; }
+  [Display(Name = "City Name")] public string CityName { get; set; }
+  [Display(Name = "Postal Code")] public int PostalCode { get; set; }
+  [Display(Name = "Postal Name")] public string PostalName { get; set; }    
 
     public virtual Country CountryCodeNavigation { get; set; }
 
