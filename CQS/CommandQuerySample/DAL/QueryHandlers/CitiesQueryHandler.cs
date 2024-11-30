@@ -43,7 +43,7 @@ namespace DAL.QueryHandlers
       {
         foreach(var sortInfo in query.Sort.ColumnOrder)
         {
-          if (orderSelectors.TryGetValue(sortInfo.Key.ToLower(), out var expr))
+          if (sortInfo.Key != null && orderSelectors.TryGetValue(sortInfo.Key.ToLower(), out var expr))
           {
             dbQuery = sortInfo.Value == SortInfo.Order.ASCENDING ? dbQuery.OrderBy(expr) : dbQuery.OrderByDescending(expr);
           }
