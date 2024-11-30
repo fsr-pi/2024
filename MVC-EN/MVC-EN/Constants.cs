@@ -1,9 +1,8 @@
-﻿namespace MVC_EN
-{
-  public class Constants
-  {
-    public static string Message => nameof(Message);
+﻿namespace MVC_EN;
 
-    public static string ErrorOccurred => "ErrorOccurred";
-  }
+public class Constants
+{
+  public static string Message => nameof(Message);
+
+  public const string ErrorOccurred = "ErrorOccurred";
 }
