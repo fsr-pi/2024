@@ -11,7 +11,7 @@ namespace WebApi.Validators
 
       RuleFor(m => m.CityName).NotEmpty();
 
-      RuleFor(m => m.PostalCode).InclusiveBetween(10, 60000);
+      RuleFor(m => m.PostalCode).InclusiveBetween(10, 90000);
     }
   }
 }

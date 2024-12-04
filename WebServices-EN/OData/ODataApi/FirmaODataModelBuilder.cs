@@ -13,7 +13,7 @@ namespace ODataApi
 
       var builder = new ODataConventionModelBuilder();
 
-      builder.EntitySet<DTOs.Mjesto>("Cities")
+      builder.EntitySet<DTOs.CityDto>("Cities")
                         .EntityType
                         .Filter() // Allow for the $filter Command
                         .Count() // Allow for the $count Command                     
