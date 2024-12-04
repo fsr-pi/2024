@@ -1,4 +1,5 @@
 using AutoMapper;
+using Contract;
 using Contract.Validation;
 using DAL.Models;
 using FluentValidation;
@@ -45,6 +46,7 @@ builder.Services.AddAutoMapper(typeof(ApiModelsMappingProfile));
 #region Register handlers
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<DAL.CommandHandlers.CitiesCommandHandler>());
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationPipeline<,>));
+builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(PrintPipeline<,>));
 #endregion
 
 #endregion
